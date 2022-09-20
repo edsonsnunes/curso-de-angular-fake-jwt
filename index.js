@@ -19,14 +19,20 @@ app.post("/sign", (req, res) => {
       role: ["sysAdmin"],
     };
 
-    const token = jwt.sign({ data }, "SECRET", {
+    const token = jwt.sign({
+      data
+    }, "SECRET", {
       expiresIn: 100000,
     });
 
-    return res.json({ token: token });
+    return res.json({
+      token
+    });
   }
 
-  res.status(500).json({ message: "Usuário ou senha incorreta" });
+  res.status(500).json({
+    message: "Usuário ou senha incorreta"
+  });
 });
 
 app.listen(port, () => {
