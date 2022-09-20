@@ -9,8 +9,8 @@
   border: none;
   color: $branco;
 
-  & :disabled {
+  &:disabled {
     cursor: no-drop;
-    background: darken(green, 20%);
+    background: darken($vermelho, 20%);
   }
 }
