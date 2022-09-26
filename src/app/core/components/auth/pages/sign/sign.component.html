@@ -16,8 +16,9 @@
           fill="#4A4A4A" />
       </svg>
       <input type="password" formControlName='password' placeholder="Senha" required>
+
     </label>
+    <button class="btn-vermelho" [disabled]="formAuth.invalid">Login</button>
   </form>
-  <button class="btn-vermelho" [disabled]="formAuth.invalid">Login</button>
-  <span class="msg-error" *ngIf="msgError"> {{msgError}}Usuário ou senha incorreta </span>
+  <span class="msg-error" *ngIf="msgError">{{msgError}}</span>
 </div>
